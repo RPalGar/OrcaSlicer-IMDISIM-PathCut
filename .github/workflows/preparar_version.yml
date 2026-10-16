@@ -1,0 +1,39 @@
+name: Preparar versión (borrador)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:      { description: "Etiqueta de la versión", required: true, default: "beta-adimaker26" }
+      titulo:   { description: "Título", required: true, default: "Beta Adimaker26" }
+      notas:    { description: "Archivo de notas en .github/notas", required: true, default: "beta-adimaker26.md" }
+      artifact: { description: "ID del artifact portable en RPalGar/OrcaSlicer", required: true }
+      commit:   { description: "Commit de RPalGar/OrcaSlicer con el que se compiló", required: true }
+
+permissions:
+  contents: write
+
+jobs:
+  borrador:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar el portable compilado
+        run: |
+          gh api "repos/RPalGar/OrcaSlicer/actions/artifacts/${{ inputs.artifact }}/zip" > artifact.zip
+          mkdir dist && unzip -q artifact.zip -d art
+          ls -la art
+          cp art/*.zip dist/ 2>/dev/null || (cd art && zip -qr "../dist/OrcaSlicer_Windows_V2.5.0-dev_x64_portable.zip" .)
+      - name: Empaquetar el código fuente exacto
+        run: |
+          git init -q src && cd src
+          git remote add origin https://github.com/RPalGar/OrcaSlicer.git
+          git fetch -q --depth 1 origin "${{ inputs.commit }}"
+          short=$(echo "${{ inputs.commit }}" | cut -c1-8)
+          git archive --format=zip --prefix="OrcaSlicer-IMDISIM-PathCut-$short/" -o "../dist/codigo-fuente-$short.zip" FETCH_HEAD
+      - name: Crear la versión como borrador
+        run: |
+          ls -la dist
+          gh release create "${{ inputs.tag }}" dist/* --draft --target "${{ github.sha }}" \
+            --title "${{ inputs.titulo }}" --notes-file ".github/notas/${{ inputs.notas }}"
