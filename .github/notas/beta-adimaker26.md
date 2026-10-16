@@ -12,7 +12,7 @@ Primera versión pública de **OrcaSlicer · IMDISIM · Cortar por ruta**, prese
 4. Selecciona una figura y pulsa el icono **Cortar por ruta**.
 
 ## Aviso
-Versión **beta**, sin garantía. Guarda tu proyecto antes de cortar. Solo corta objetos de una sola parte y una sola copia.
+Versión **beta**, sin garantía. Guarda tu proyecto antes de cortar. Si el objeto tiene varias partes, se unen en una sola antes de cortar. No corta objetos con varias copias ni con volúmenes negativos.
 
 Desarrollada por Rubén Palenzuela (IMDISIM) con Claude (IA de Anthropic); revisada con auditorías y pruebas automáticas hechas también con IA, sin revisión de programadores humanos.
 

@@ -23,7 +23,7 @@
 ## Aviso: versión experimental
 
 - Es una **beta** para probar. **Guarda tu proyecto antes de cortar** y revisa las piezas antes de una impresión importante.
-- Solo corta objetos de **una sola parte y una sola copia**. Si el objeto tiene varias copias, modificadores o volúmenes negativos, te lo dirá en vez de cortar.
+- Si el objeto tiene **varias partes**, se unen en una sola antes de cortar; sus modificadores y bloqueadores de soporte se quitan (te avisa). No corta objetos con **varias copias** ni con **volúmenes negativos**: te lo dirá en vez de cortar.
 - Ejecutable sin firmar, compilado automáticamente en GitHub Actions a partir del código publicado.
 - Se distribuye **sin ninguna garantía**, según la licencia AGPL-3.0.
 
