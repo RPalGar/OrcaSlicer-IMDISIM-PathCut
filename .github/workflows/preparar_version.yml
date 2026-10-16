@@ -32,8 +32,23 @@ jobs:
           git fetch -q --depth 1 origin "${{ inputs.commit }}"
           short=$(echo "${{ inputs.commit }}" | cut -c1-8)
           git archive --format=zip --prefix="OrcaSlicer-IMDISIM-PathCut-$short/" -o "../dist/codigo-fuente-$short.zip" FETCH_HEAD
-      - name: Crear la versión como borrador
+      - name: Crear o actualizar la versión en borrador
         run: |
           ls -la dist
-          gh release create "${{ inputs.tag }}" dist/* --draft --target "${{ github.sha }}" \
-            --title "${{ inputs.titulo }}" --notes-file ".github/notas/${{ inputs.notas }}"
+          short=$(echo "${{ inputs.commit }}" | cut -c1-8)
+          sed -e "s/{{COMMIT_CORTO}}/$short/g" -e "s/{{COMMIT}}/${{ inputs.commit }}/g" ".github/notas/${{ inputs.notas }}" > notas.md
+          # Un borrador anterior con la misma etiqueta se reutiliza: se le quitan sus archivos y se suben los nuevos.
+          id=$(gh api "repos/${{ github.repository }}/releases" --jq '.[] | select(.draft and .tag_name == "${{ inputs.tag }}") | .id' | head -1)
+          if [ -n "$id" ]; then
+            for a in $(gh api "repos/${{ github.repository }}/releases/$id/assets" --jq '.[].id'); do
+              gh api -X DELETE "repos/${{ github.repository }}/releases/assets/$a"
+            done
+            gh api -X PATCH "repos/${{ github.repository }}/releases/$id" -f name="${{ inputs.titulo }}" -F body=@notas.md -f target_commitish="${{ github.sha }}" > /dev/null
+            for f in dist/*; do
+              curl -sSf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Content-Type: application/octet-stream" \
+                --data-binary @"$f" "https://uploads.github.com/repos/${{ github.repository }}/releases/$id/assets?name=$(basename "$f")" > /dev/null
+            done
+          else
+            gh release create "${{ inputs.tag }}" dist/* --draft --target "${{ github.sha }}" \
+              --title "${{ inputs.titulo }}" --notes-file notas.md
+          fi

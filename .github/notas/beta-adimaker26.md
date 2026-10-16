@@ -17,6 +17,6 @@ Versión **beta**, sin garantía. Guarda tu proyecto antes de cortar. Solo corta
 Desarrollada por Rubén Palenzuela (IMDISIM) con Claude (IA de Anthropic); revisada con auditorías y pruebas automáticas hechas también con IA, sin revisión de programadores humanos.
 
 ## Código fuente
-`codigo-fuente-4adecfa4.zip` contiene el código exacto con el que se compiló este ejecutable (commit [`4adecfa4`](https://github.com/RPalGar/OrcaSlicer/commit/4adecfa448c2aa0ce9326032de2c429172d6d7ce)). Licencia AGPL-3.0, basada en [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer). No es una versión oficial de OrcaSlicer.
+`codigo-fuente-{{COMMIT_CORTO}}.zip` contiene el código exacto con el que se compiló este ejecutable (commit [`{{COMMIT_CORTO}}`](https://github.com/RPalGar/OrcaSlicer/commit/{{COMMIT}})). Licencia AGPL-3.0, basada en [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer). No es una versión oficial de OrcaSlicer.
 
 **Contacto:** [LinkedIn](https://www.linkedin.com/in/rub%C3%A9n-palenzuela-imdisim) · [info@imdisim.es](mailto:info@imdisim.es)
