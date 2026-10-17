@@ -27,6 +27,8 @@
 
 Si al abrir `orca-slicer.exe` aparece *«Imagen incorrecta… TKernel.dll no está diseñado para ejecutarse en Windows… 0xc0e90002»*, es **Control inteligente de aplicaciones** (Smart App Control), una protección de Windows 11 que bloquea los programas sin firma digital que Microsoft todavía no conoce. Esta versión es un proyecto pequeño de código abierto y no está firmada. **No es un virus ni un archivo dañado.**
 
+![Mensaje de Windows 11: «orca-slicer.exe - Imagen incorrecta. TKernel.dll no está diseñado para ejecutarse en Windows o contiene un error… Estado del error 0xc0e90002»](docs/img/error_windows11.png)
+
 Para poder usarla:
 
 1. Abre el menú **Inicio**, escribe **Seguridad de Windows** y ábrelo.
