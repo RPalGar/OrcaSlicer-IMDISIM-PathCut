@@ -1,3 +1,5 @@
+> **¿Windows 11?** Si al abrir sale *«Imagen incorrecta… TKernel.dll… 0xc0e90002»*, es una protección de Windows 11 con los programas sin firma. Solución paso a paso en el [README](https://github.com/RPalGar/OrcaSlicer-IMDISIM-PathCut#si-no-abre-en-windows-11).
+
 Primera versión pública de **OrcaSlicer · IMDISIM · Cortar por ruta**, presentada en **Adimaker 2026** (Tenerife).
 
 ## Qué trae
@@ -8,7 +10,7 @@ Primera versión pública de **OrcaSlicer · IMDISIM · Cortar por ruta**, prese
 ## Descarga (Windows 64 bits)
 1. Descarga **`OrcaSlicer_Windows_V2.5.0-dev_x64_portable.zip`** (abajo, en *Assets*).
 2. Clic derecho → **Extraer todo…** y abre **`orca-slicer.exe`**. No hace falta instalar.
-3. Windows avisará de que no está firmado: **Más información → Ejecutar de todas formas**.
+3. Windows avisará de que no está firmado: **Más información → Ejecutar de todas formas**. En Windows 11, si sale *«Imagen incorrecta»*, sigue los pasos del [README](https://github.com/RPalGar/OrcaSlicer-IMDISIM-PathCut#si-no-abre-en-windows-11).
 4. Selecciona una figura y pulsa el icono **Cortar por ruta**.
 
 ## Aviso
