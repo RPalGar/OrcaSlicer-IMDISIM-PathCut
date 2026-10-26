@@ -2,7 +2,7 @@
 
 > **¿La has probado?** Cuéntanos si has encontrado algún error y qué te ha parecido en el [formulario de errores y opinión](https://forms.gle/iAx6crNoZSRnkDvk7) (abierto hasta el 9 de noviembre de 2026).
 
-> **¿Tienes Mac o Linux?** De momento esta versión es solo para Windows. Llevarla a otros sistemas pide más medios de los que tenemos ahora mismo, así que te pedimos un poco de paciencia… y que le pongas una velita a Lourdes para que OrcaSlicer la adopte y te llegue directamente en tu Orca de siempre. 🕯️
+> **¿Mac o Linux?** Por ahora solo Windows… y una velita a Lourdes para que OrcaSlicer la adopte. 🕯️
 
 Tercera versión de **OrcaSlicer · IMDISIM · Cortar por ruta**: la que se usó en las demostraciones de **Adimaker 2026** (Tenerife), con las mejoras que salieron de probarla allí.
 
