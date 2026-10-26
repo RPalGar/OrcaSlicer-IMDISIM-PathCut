@@ -5,7 +5,11 @@
 
 **Versión beta Adimaker26** — versión no oficial de [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) con una herramienta nueva: **cortar figuras por donde tú quieras**, no solo con un plano.
 
-### ⬇️ [Descargar la última versión (Windows 64 bits)](../../releases)
+### ⬇️ [Descargar la última versión (Windows 64 bits)](../../releases/latest)
+
+> **¿La has probado?** Cuéntanos si has encontrado algún error y qué te ha parecido en el [**formulario de errores y opinión**](https://forms.gle/iAx6crNoZSRnkDvk7) (abierto hasta el 9 de noviembre de 2026).
+>
+> **¿Tienes Mac o Linux?** De momento es solo para Windows. Llevarla a otros sistemas pide más medios de los que tenemos ahora mismo, así que te pedimos un poco de paciencia… y que le pongas una velita a Lourdes para que OrcaSlicer la adopte y te llegue directamente en tu Orca de siempre. 🕯️
 
 ---
 
@@ -18,7 +22,7 @@
 
 ## Cómo instalarlo
 
-1. Entra en [**Releases**](../../releases) y descarga el archivo que termina en **`_portable.zip`**.
+1. Entra en [**la última versión**](../../releases/latest) y descarga el archivo que termina en **`_portable.zip`**.
 2. Clic derecho → **Extraer todo…** y abre **`orca-slicer.exe`**. No hace falta instalar nada.
 3. Windows avisará de que el programa no está firmado: **Más información → Ejecutar de todas formas**. En Windows 11, si sale *«Imagen incorrecta»*, mira [Si no abre en Windows 11](#si-no-abre-en-windows-11).
 4. Selecciona una figura y pulsa el icono **Cortar por ruta** de la barra de herramientas.

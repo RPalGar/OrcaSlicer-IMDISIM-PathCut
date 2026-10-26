@@ -1,6 +1,8 @@
 > **¿Windows 11?** Si al abrir sale *«Imagen incorrecta… TKernel.dll… 0xc0e90002»*, es una protección de Windows 11 con los programas sin firma. Solución paso a paso en el [README](https://github.com/RPalGar/OrcaSlicer-IMDISIM-PathCut#si-no-abre-en-windows-11).
 
-> **¿Has encontrado un fallo?** Cuéntamelo en el [cuestionario de fallos]({{CUESTIONARIO}}) (abierto hasta el {{CUESTIONARIO_FIN}}).
+> **¿La has probado?** Cuéntanos si has encontrado algún error y qué te ha parecido en el [formulario de errores y opinión](https://forms.gle/iAx6crNoZSRnkDvk7) (abierto hasta el 9 de noviembre de 2026).
+
+> **¿Tienes Mac o Linux?** De momento esta versión es solo para Windows. Llevarla a otros sistemas pide más medios de los que tenemos ahora mismo, así que te pedimos un poco de paciencia… y que le pongas una velita a Lourdes para que OrcaSlicer la adopte y te llegue directamente en tu Orca de siempre. 🕯️
 
 Tercera versión de **OrcaSlicer · IMDISIM · Cortar por ruta**: la que se usó en las demostraciones de **Adimaker 2026** (Tenerife), con las mejoras que salieron de probarla allí.
 
