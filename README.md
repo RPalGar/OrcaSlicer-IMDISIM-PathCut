@@ -59,7 +59,13 @@ Esta herramienta la ha desarrollado Rubén Palenzuela (IMDISIM) con **Claude**, 
 
 ## Contacto
 
-¿Algo falla, o se te ocurre una mejora? Escríbeme:
+¿Algo falla, o se te ocurre una mejora? Lo más rápido es el formulario:
+
+<p align="center">
+  <a href="https://forms.gle/iAx6crNoZSRnkDvk7"><img src="docs/formulario/boton_formulario.png" alt="Cuéntanos qué te parece: formulario de errores y opinión (abierto hasta el 9 de noviembre)" width="460"></a>
+</p>
+
+Si prefieres escribirme:
 
 - LinkedIn: [Rubén Palenzuela · IMDISIM](https://www.linkedin.com/in/rub%C3%A9n-palenzuela-imdisim)
 - Correo: [info@imdisim.es](mailto:info@imdisim.es)
