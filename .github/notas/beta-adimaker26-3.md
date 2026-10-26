@@ -2,6 +2,10 @@
 
 > **¿La has probado?** Cuéntanos si has encontrado algún error y qué te ha parecido en el [formulario de errores y opinión](https://forms.gle/iAx6crNoZSRnkDvk7) (abierto hasta el 9 de noviembre de 2026).
 
+<p align="center">
+  <a href="https://forms.gle/iAx6crNoZSRnkDvk7"><img src="https://raw.githubusercontent.com/RPalGar/OrcaSlicer-IMDISIM-PathCut/main/docs/formulario/boton_formulario.png" alt="Cuéntanos qué te parece: formulario de errores y opinión (abierto hasta el 9 de noviembre)" width="460"></a>
+</p>
+
 > **¿Mac o Linux?** Por ahora solo Windows… y una velita a Lourdes para que OrcaSlicer la adopte. 🕯️
 
 Tercera versión de **OrcaSlicer · IMDISIM · Cortar por ruta**: la que se usó en las demostraciones de **Adimaker 2026** (Tenerife), con las mejoras que salieron de probarla allí.
