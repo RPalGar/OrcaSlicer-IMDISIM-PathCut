@@ -38,12 +38,13 @@ jobs:
           short=$(echo "${{ inputs.commit }}" | cut -c1-8)
           sed -e "s/{{COMMIT_CORTO}}/$short/g" -e "s/{{COMMIT}}/${{ inputs.commit }}/g" ".github/notas/${{ inputs.notas }}" > notas.md
           # Un borrador anterior con la misma etiqueta se reutiliza: se le quitan sus archivos y se suben los nuevos.
-          id=$(gh api "repos/${{ github.repository }}/releases" --jq '.[] | select(.draft and .tag_name == "${{ inputs.tag }}") | .id' | head -1)
+          # Los borradores pueden perder la etiqueta al editarse (aparecen como "untagged-..."): se busca también por título.
+          id=$(gh api "repos/${{ github.repository }}/releases" --jq '.[] | select(.draft and (.tag_name == "${{ inputs.tag }}" or .name == "${{ inputs.titulo }}")) | .id' | head -1)
           if [ -n "$id" ]; then
             for a in $(gh api "repos/${{ github.repository }}/releases/$id/assets" --jq '.[].id'); do
               gh api -X DELETE "repos/${{ github.repository }}/releases/assets/$a"
             done
-            gh api -X PATCH "repos/${{ github.repository }}/releases/$id" -f name="${{ inputs.titulo }}" -F body=@notas.md -f target_commitish="${{ github.sha }}" > /dev/null
+            gh api -X PATCH "repos/${{ github.repository }}/releases/$id" -f tag_name="${{ inputs.tag }}" -f name="${{ inputs.titulo }}" -F body=@notas.md -f target_commitish="${{ github.sha }}" > /dev/null
             for f in dist/*; do
               curl -sSf -X POST -H "Authorization: Bearer $GH_TOKEN" -H "Content-Type: application/octet-stream" \
                 --data-binary @"$f" "https://uploads.github.com/repos/${{ github.repository }}/releases/$id/assets?name=$(basename "$f")" > /dev/null
