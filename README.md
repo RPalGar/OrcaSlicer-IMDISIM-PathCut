@@ -5,11 +5,13 @@
 
 **Versión beta Adimaker26** — versión no oficial de [OrcaSlicer](https://github.com/OrcaSlicer/OrcaSlicer) con una herramienta nueva: **cortar figuras por donde tú quieras**, no solo con un plano.
 
-### ⬇️ [Descargar la última versión (Windows 64 bits)](../../releases/latest)
+### ⬇️ [Descargar la última versión (Windows, Mac y Linux)](../../releases/latest)
 
 > **¿La has probado?** Cuéntanos si has encontrado algún error y qué te ha parecido en el [**formulario de errores y opinión**](https://forms.gle/iAx6crNoZSRnkDvk7) (abierto hasta el 15 de noviembre de 2026).
 >
-> **¿Mac o Linux?** Por ahora solo Windows… y una velita a Lourdes para que OrcaSlicer la adopte. 🕯️
+> **¿Mac o Linux?** Desde la Beta 4, también. Y ya hemos propuesto la herramienta al OrcaSlicer oficial ([PR #17056](https://github.com/OrcaSlicer/OrcaSlicer/pull/17056)), así que la velita a Lourdes sigue encendida. 🕯️
+>
+> **¿Quieres que llegue al OrcaSlicer oficial?** Dale 👍 a la [petición de la función (#17041)](https://github.com/OrcaSlicer/OrcaSlicer/issues/17041) y al [PR (#17056)](https://github.com/OrcaSlicer/OrcaSlicer/pull/17056) en GitHub.
 
 ---
 
@@ -20,12 +22,31 @@
 - **Conectores:** espiga y agujero, o pasador suelto; cilíndricos o cuadrados; se colocan solos donde caben, con la holgura que elijas.
 - Deja una separación ajustable entre piezas, cierra las caras de corte y coloca la pieza separada en un hueco libre de la placa.
 
-## Cómo instalarlo
+## Cómo instalarlo en Windows
 
 1. Entra en [**la última versión**](../../releases/latest) y descarga el archivo que termina en **`_portable.zip`**.
 2. Clic derecho → **Extraer todo…** y abre **`orca-slicer.exe`**. No hace falta instalar nada.
 3. Windows avisará de que el programa no está firmado: **Más información → Ejecutar de todas formas**. En Windows 11, si sale *«Imagen incorrecta»*, mira [Si no abre en Windows 11](#si-no-abre-en-windows-11).
 4. Selecciona una figura y pulsa el icono **Cortar por ruta** de la barra de herramientas.
+
+## Cómo instalarlo en Mac
+
+1. Entra en [**la última versión**](../../releases/latest), descarga el archivo **`.dmg`**, ábrelo y arrastra **OrcaSlicer** a **Aplicaciones**.
+2. La primera vez, macOS dirá que no puede comprobar el desarrollador (no está firmada). Ve a **Ajustes del Sistema → Privacidad y seguridad**, baja hasta el aviso de OrcaSlicer y pulsa **Abrir igualmente**.
+3. Si dice que la app **«está dañada»**, abre **Terminal** y escribe `xattr -cr /Applications/OrcaSlicer.app`; después ábrela de nuevo.
+4. Selecciona una figura y pulsa el icono **Cortar por ruta** de la barra de herramientas.
+
+Funciona en Mac con Apple Silicon y con Intel.
+
+## Cómo instalarlo en Linux
+
+1. Necesitas **Flatpak** (viene de serie en Fedora, Linux Mint y otras; en Ubuntu: `sudo apt install flatpak`) y el repositorio Flathub, del que se bajan sus dependencias:
+   `flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo`
+2. Entra en [**la última versión**](../../releases/latest) y descarga el archivo **`.flatpak`**.
+3. En una terminal, en la carpeta de la descarga: `flatpak install --user OrcaSlicer_Linux_V2.5.0-dev_x86_64.flatpak`
+4. Ábrelo desde el menú de aplicaciones o con `flatpak run com.orcaslicer.OrcaSlicer`, selecciona una figura y pulsa el icono **Cortar por ruta**.
+
+Las versiones de Mac y Linux se han compilado y han pasado las pruebas automáticas, pero aún no se han probado a mano: si las usas, cuéntanos cómo van.
 
 ## Si no abre en Windows 11
 

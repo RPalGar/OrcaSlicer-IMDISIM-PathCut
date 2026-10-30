@@ -7,6 +7,8 @@ on:
       titulo:   { description: "Título", required: true, default: "Beta Adimaker26" }
       notas:    { description: "Archivo de notas en .github/notas", required: true, default: "beta-adimaker26.md" }
       artifact: { description: "ID del artifact portable en RPalGar/OrcaSlicer", required: true }
+      artifact_mac: { description: "ID del artifact Mac universal en RPalGar/OrcaSlicer (opcional)", required: false, default: "" }
+      artifact_linux: { description: "ID del artifact Flatpak x86_64 en RPalGar/OrcaSlicer (opcional)", required: false, default: "" }
       commit:   { description: "Commit de RPalGar/OrcaSlicer con el que se compiló", required: true }
 
 permissions:
@@ -25,6 +27,21 @@ jobs:
           mkdir dist && unzip -q artifact.zip -d art
           ls -la art
           cp art/*.zip dist/ 2>/dev/null || (cd art && zip -qr "../dist/OrcaSlicer_Windows_V2.5.0-dev_x64_portable.zip" .)
+      - name: Descargar el Mac universal compilado
+        if: inputs.artifact_mac != ''
+        run: |
+          gh api "repos/RPalGar/OrcaSlicer/actions/artifacts/${{ inputs.artifact_mac }}/zip" > mac.zip
+          mkdir mac && unzip -q mac.zip -d mac
+          ls -la mac
+          dmg=$(find mac -name "*.dmg" | head -1)
+          if [ -n "$dmg" ]; then cp "$dmg" "dist/OrcaSlicer_Mac_universal_V2.5.0-dev.dmg"; else (cd mac && zip -qr "../dist/OrcaSlicer_Mac_universal_V2.5.0-dev.zip" .); fi
+      - name: Descargar el Flatpak de Linux compilado
+        if: inputs.artifact_linux != ''
+        run: |
+          gh api "repos/RPalGar/OrcaSlicer/actions/artifacts/${{ inputs.artifact_linux }}/zip" > linux.zip
+          mkdir linux && unzip -q linux.zip -d linux
+          ls -la linux
+          cp "$(find linux -name "*.flatpak" | head -1)" "dist/OrcaSlicer_Linux_V2.5.0-dev_x86_64.flatpak"
       - name: Empaquetar el código fuente exacto
         run: |
           git init -q src && cd src
