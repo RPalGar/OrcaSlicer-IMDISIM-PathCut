@@ -6,6 +6,8 @@
   <a href="https://forms.gle/iAx6crNoZSRnkDvk7"><img src="https://raw.githubusercontent.com/RPalGar/OrcaSlicer-IMDISIM-PathCut/main/docs/formulario/boton_formulario_15nov.png" alt="Cuéntanos qué te parece: formulario de errores y opinión (abierto hasta el 15 de noviembre)" width="460"></a>
 </p>
 
+### ▶️ [Mira cómo funciona en vídeo (YouTube)](https://youtu.be/GLiJ7o6v1qY)
+
 Cuarta versión de **OrcaSlicer · IMDISIM · Cortar por ruta**, y la primera **también para Mac y Linux**. Es la misma herramienta que hemos propuesto para el OrcaSlicer oficial ([PR #17056](https://github.com/OrcaSlicer/OrcaSlicer/pull/17056)), con la interfaz en español.
 
 > **¿Quieres que llegue al OrcaSlicer oficial?** Dale 👍 a la [petición de la función (#17041)](https://github.com/OrcaSlicer/OrcaSlicer/issues/17041) y al [PR (#17056)](https://github.com/OrcaSlicer/OrcaSlicer/pull/17056) en GitHub.

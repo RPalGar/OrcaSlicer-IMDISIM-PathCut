@@ -7,6 +7,8 @@
 
 ### ⬇️ [Descargar la última versión (Windows, Mac y Linux)](../../releases/latest)
 
+### ▶️ [Mira cómo funciona en vídeo (YouTube)](https://youtu.be/GLiJ7o6v1qY)
+
 > **¿La has probado?** Cuéntanos si has encontrado algún error y qué te ha parecido en el [**formulario de errores y opinión**](https://forms.gle/iAx6crNoZSRnkDvk7) (abierto hasta el 15 de noviembre de 2026).
 >
 > **¿Mac o Linux?** Desde la Beta 4, también. Y ya hemos propuesto la herramienta al OrcaSlicer oficial ([PR #17056](https://github.com/OrcaSlicer/OrcaSlicer/pull/17056)), así que la velita a Lourdes sigue encendida. 🕯️
